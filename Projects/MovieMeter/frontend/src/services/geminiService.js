@@ -1,9 +1,8 @@
 import { getCachedData, setCachedData } from '../utils/cacheManager';
 
 export const generateAIVibeCheck = async (movieData, reviews) => {
-    // 1. Check if we already analyzed this movie today
     const cacheKey = `ai_vibe_${movieData.id}`;
-    const cachedAI = getCachedData(cacheKey, 24); // 24-hour TTL
+    const cachedAI = getCachedData(cacheKey, 24);
     if (cachedAI) {
         console.log("Loaded AI Vibe Check from cache!");
         return cachedAI;
@@ -19,53 +18,60 @@ export const generateAIVibeCheck = async (movieData, reviews) => {
   
   TASK:
   If user reviews exist below, analyze them to determine the general consensus.
-  If NO reviews exist (unreleased or obscure), analyze the plot and status to generate a hype/anticipation forecast.
+  If NO reviews exist, analyze the plot and status to generate a hype/anticipation forecast.
   
-  Return ONLY valid JSON in this exact format, with no markdown formatting or text outside the brackets:
+  Return ONLY valid JSON in this exact format.
   {
     "mode": "${hasReviews ? 'sentiment' : 'forecast'}",
     "title": "${hasReviews ? 'Audience Vibe Check' : 'Anticipation Forecast'}",
-    "summary": "A punchy, 2-sentence summary of the reviews OR the hype surrounding the plot.",
+    "summary": "Write a comprehensive, engaging 3-to-4 sentence paragraph. Do not be brief. Detail both the specific praise and the specific criticisms mentioned in the reviews (or the strengths of the plot if unreleased).",
+    "keyThemes": ["Theme 1", "Theme 2", "Theme 3"], 
     "gaugeLabel": "${hasReviews ? 'Polarity Index' : 'Intrigue Score'}",
     "score": <number between 0 and 100>,
-    "verdict": "A 2-word conclusion (e.g., 'Highly Divisive', 'Universal Praise')"
+    "verdict": "A 2-word conclusion"
   }
 
   REVIEWS:
   ${reviewText}`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`, {
+        const response = await fetch(`https://api.groq.com/openai/v1/chat/completions`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: systemPrompt }] }]
+                model: "llama-3.1-8b-instant", // Updated to Groq's most stable current model
+                messages: [
+                    {
+                        role: "user",
+                        content: systemPrompt + "\n\nCRITICAL: Analyze this movie and return ONLY the JSON object. No markdown, no conversational text."
+                    }
+                ],
+                temperature: 0.2 // Lower temperature for more consistent formatting
             })
         });
 
         if (!response.ok) {
-            console.error(`Gemini API Failed with status: ${response.status}`);
+            console.error(`Groq API Failed with status: ${response.status}`);
+            const errorText = await response.text();
+            console.error("Groq Error Details:", errorText);
             return null;
         }
 
         const data = await response.json();
+        const aiText = data.choices[0].message.content;
 
-        if (!data.candidates || data.candidates.length === 0) {
-            console.error("Gemini API returned empty candidates.");
-            return null;
-        }
-
-        const aiText = data.candidates[0].content.parts[0].text;
+        // Manually clean the response in case the AI wraps it in markdown backticks
         const cleanJson = aiText.trim().replace(/```json/g, '').replace(/```/g, '');
         const parsedData = JSON.parse(cleanJson);
 
-        // 2. Save the successful result to the cache before returning it
         setCachedData(cacheKey, parsedData);
-
         return parsedData;
 
     } catch (error) {
-        console.error("Gemini AI Parsing Error:", error);
+        console.error("Groq AI Parsing Error:", error);
         return null;
     }
 };

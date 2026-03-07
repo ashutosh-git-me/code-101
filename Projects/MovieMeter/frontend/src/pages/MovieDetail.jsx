@@ -34,6 +34,13 @@ export default function MovieDetail() {
     const [movieReviews, setMovieReviews] = useState([]);
 
     useEffect(() => {
+        // Wipe the AI memory clean when navigating to a new movie
+        setAiInsights(null);
+        setHasRequestedAi(false);
+        setIsAiLoading(false);
+    }, [id]);
+
+    useEffect(() => {
         const loadMovie = async () => {
             try {
                 const data = mediaType === 'tv' ? await fetchTVDetails(id) : await fetchMovieDetails(id);
@@ -200,9 +207,19 @@ export default function MovieDetail() {
                         </div>
 
                         {/* Summary */}
-                        <p className="text-gray-300 italic text-sm leading-relaxed mb-6">
+                        <p className="text-gray-300 italic text-sm leading-relaxed mb-4">
                             "{aiInsights.summary}"
                         </p>
+
+                        {aiInsights.keyThemes && aiInsights.keyThemes.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mb-6">
+                                {aiInsights.keyThemes.map((theme, index) => (
+                                    <span key={index} className="bg-purple-900/40 border border-purple-500/30 text-purple-200 text-xs px-3 py-1 rounded-full shadow-sm">
+                                        {theme}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
 
                         {/* The Gauge UI */}
                         <div className="bg-black/40 rounded-lg p-4">
