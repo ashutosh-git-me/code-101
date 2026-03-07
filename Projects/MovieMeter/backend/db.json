@@ -1,0 +1,674 @@
+[
+  {
+    "id": 1,
+    "title": "Gladiator 2",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Gladiator+II",
+    "votes": 150000,
+    "weeksSinceRelease": 1,
+    "streamingPlatform": "In Theaters",
+    "trailerUrl": "https://www.youtube.com/embed/4rgYUipGJNo",
+    "year": "2024",
+    "runtime": "2h 28m",
+    "director": "Ridley Scott",
+    "plot": "Years after witnessing the death of the revered hero Maximus at the hands of his uncle, Lucius is forced to enter the Colosseum after his home is conquered by the tyrannical Emperors who now lead Rome with an iron fist.",
+    "cast": [
+      "Paul Mescal",
+      "Pedro Pascal",
+      "Denzel Washington",
+      "Connie Nielsen"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "platformScores": {
+      "imdb": 75,
+      "rt": 72,
+      "meta": 65,
+      "google": 85,
+      "toi": 80
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Gladiator+II",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Gladiator%202+Backdrop",
+    "watchLink": "https://www.fandango.com"
+  },
+  {
+    "id": 2,
+    "title": "Kishkindha Kaandam",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Kishkindha+Kaandam",
+    "votes": 5500,
+    "weeksSinceRelease": 10,
+    "streamingPlatform": "Disney+ Hotstar",
+    "trailerUrl": "https://www.youtube.com/embed/n35pQnC-WKE",
+    "year": "2024",
+    "runtime": "2h 5m",
+    "director": "Dinjith Ayyathan",
+    "plot": "Set in the monkey-inhabited Kishkindha, strange events begin to occur when a retired army officer with memory issues lives with his son and newlywed daughter-in-law.",
+    "cast": [
+      "Asif Ali",
+      "Vijayaraghavan",
+      "Aparna Balamurali"
+    ],
+    "genre": [
+      "Mystery",
+      "Thriller"
+    ],
+    "platformScores": {
+      "imdb": 86,
+      "rt": null,
+      "meta": null,
+      "google": 92,
+      "toi": 88
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Kishkindha+Kaandam",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Kishkindha%20Kaandam+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 3,
+    "title": "Dune: Part Two",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Dune:+Part+Two",
+    "votes": 850000,
+    "weeksSinceRelease": 35,
+    "streamingPlatform": "Max",
+    "trailerUrl": "https://www.youtube.com/embed/Way9Dexny3w",
+    "year": "2024",
+    "runtime": "2h 46m",
+    "director": "Denis Villeneuve",
+    "plot": "Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, he endeavors to prevent a terrible future only he can foresee.",
+    "cast": [
+      "Timothée Chalamet",
+      "Zendaya",
+      "Rebecca Ferguson",
+      "Javier Bardem"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Adventure",
+      "Action"
+    ],
+    "platformScores": {
+      "imdb": 86,
+      "rt": 92,
+      "meta": 79,
+      "google": 94,
+      "toi": 85
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Dune:+Part+Two",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Dune%3A%20Part%20Two+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 4,
+    "title": "Kalki 2898 AD",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Kalki+2898+AD",
+    "votes": 250000,
+    "weeksSinceRelease": 20,
+    "streamingPlatform": "Prime Video",
+    "trailerUrl": "https://www.youtube.com/embed/y13x1H8jT3E",
+    "year": "2024",
+    "runtime": "3h 1m",
+    "director": "Nag Ashwin",
+    "plot": "A modern-day avatar of Vishnu, a Hindu god, who is believed to have descended to earth to protect the world from evil forces in a post-apocalyptic era.",
+    "cast": [
+      "Prabhas",
+      "Amitabh Bachchan",
+      "Kamal Haasan",
+      "Deepika Padukone"
+    ],
+    "genre": [
+      "Sci-Fi",
+      "Action",
+      "Drama"
+    ],
+    "platformScores": {
+      "imdb": 76,
+      "rt": 78,
+      "meta": null,
+      "google": 88,
+      "toi": 70
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Kalki+2898+AD",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Kalki%202898%20AD+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 5,
+    "title": "Animal",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Animal",
+    "votes": 400000,
+    "weeksSinceRelease": 50,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/Dydmpfo68DA",
+    "year": "2023",
+    "runtime": "3h 21m",
+    "director": "Sandeep Reddy Vanga",
+    "plot": "The hardened son of a powerful industrialist embarks on a bloody trail of vengeance against his father's sworn enemies while attempting to understand his own violent nature.",
+    "cast": [
+      "Ranbir Kapoor",
+      "Anil Kapoor",
+      "Bobby Deol",
+      "Rashmika Mandanna"
+    ],
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "platformScores": {
+      "imdb": 61,
+      "rt": 30,
+      "meta": 40,
+      "google": 78,
+      "toi": 65
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Animal",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Animal+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 6,
+    "title": "Manjummel Boys",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Manjummel+Boys",
+    "votes": 120000,
+    "weeksSinceRelease": 38,
+    "streamingPlatform": "Disney+ Hotstar",
+    "trailerUrl": "https://www.youtube.com/embed/Idh8KCSusH0",
+    "year": "2024",
+    "runtime": "2h 15m",
+    "director": "Chidambaram",
+    "plot": "A group of friends' vacation takes a dangerous turn when one of them falls into the deadly Guna Caves. The rest of the group must orchestrate a desperate rescue mission against all odds.",
+    "cast": [
+      "Soubin Shahir",
+      "Sreenath Bhasi",
+      "Balu Varghese"
+    ],
+    "genre": [
+      "Adventure",
+      "Thriller",
+      "Survival"
+    ],
+    "platformScores": {
+      "imdb": 83,
+      "rt": 100,
+      "meta": null,
+      "google": 95,
+      "toi": 90
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Manjummel+Boys",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Manjummel%20Boys+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 7,
+    "title": "Maharaja",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Maharaja",
+    "votes": 90000,
+    "weeksSinceRelease": 24,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/AFIHmsXQ49o",
+    "year": "2024",
+    "runtime": "2h 21m",
+    "director": "Nithilan Saminathan",
+    "plot": "A peaceful barber's life is turned upside down when a traumatic event occurs at his home, leading him on a brutal quest for vengeance to retrieve a stolen object.",
+    "cast": [
+      "Vijay Sethupathi",
+      "Anurag Kashyap",
+      "Mamta Mohandas"
+    ],
+    "genre": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "platformScores": {
+      "imdb": 85,
+      "rt": 90,
+      "meta": null,
+      "google": 93,
+      "toi": 85
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Maharaja",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Maharaja+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 8,
+    "title": "Joker: Folie à Deux",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Joker:+Folie+a+Deux",
+    "votes": 180000,
+    "weeksSinceRelease": 6,
+    "streamingPlatform": "In Theaters",
+    "trailerUrl": "https://www.youtube.com/embed/xy8aJw1vYHo",
+    "year": "2024",
+    "runtime": "2h 18m",
+    "director": "Todd Phillips",
+    "plot": "Refraining from his violent alter ego, Arthur Fleck explores his newfound passion for music and chaotic romance with Harley Quinn while confined in Arkham State Hospital.",
+    "cast": [
+      "Joaquin Phoenix",
+      "Lady Gaga",
+      "Brendan Gleeson"
+    ],
+    "genre": [
+      "Musical",
+      "Drama",
+      "Crime"
+    ],
+    "platformScores": {
+      "imdb": 53,
+      "rt": 33,
+      "meta": 45,
+      "google": 45,
+      "toi": 55
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Joker:+Folie+a+Deux",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Joker%3A%20Folie%20%C3%A0%20Deux+Backdrop",
+    "watchLink": "https://www.fandango.com"
+  },
+  {
+    "id": 9,
+    "title": "Adipurush",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Adipurush",
+    "votes": 130000,
+    "weeksSinceRelease": 75,
+    "streamingPlatform": "Prime Video",
+    "trailerUrl": "https://www.youtube.com/embed/scNmYjdHkzg",
+    "year": "2023",
+    "runtime": "2h 59m",
+    "director": "Om Raut",
+    "plot": "A modern adaptation of the Indian epic Ramayana, following the exiled prince Raghav's journey to rescue his wife Janaki from the demon king Lankesh.",
+    "cast": [
+      "Prabhas",
+      "Kriti Sanon",
+      "Saif Ali Khan"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "platformScores": {
+      "imdb": 28,
+      "rt": 15,
+      "meta": null,
+      "google": 25,
+      "toi": 30
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Adipurush",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Adipurush+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 10,
+    "title": "Oppenheimer",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Oppenheimer",
+    "votes": 1400000,
+    "weeksSinceRelease": 65,
+    "streamingPlatform": "Peacock",
+    "trailerUrl": "https://www.youtube.com/embed/uYPbbksJxIg",
+    "year": "2023",
+    "runtime": "3h 0m",
+    "director": "Christopher Nolan",
+    "plot": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb during World War II.",
+    "cast": [
+      "Cillian Murphy",
+      "Emily Blunt",
+      "Matt Damon",
+      "Robert Downey Jr."
+    ],
+    "genre": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "platformScores": {
+      "imdb": 84,
+      "rt": 93,
+      "meta": 90,
+      "google": 95,
+      "toi": 92
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Oppenheimer",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Oppenheimer+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 11,
+    "title": "The Batman",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=The+Batman",
+    "votes": 850000,
+    "weeksSinceRelease": 135,
+    "streamingPlatform": "Max",
+    "trailerUrl": "https://www.youtube.com/embed/mqqft2x_Aa4",
+    "year": "2022",
+    "runtime": "2h 56m",
+    "director": "Matt Reeves",
+    "plot": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+    "cast": [
+      "Robert Pattinson",
+      "Zoë Kravitz",
+      "Paul Dano",
+      "Jeffrey Wright"
+    ],
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "platformScores": {
+      "imdb": 78,
+      "rt": 85,
+      "meta": 72,
+      "google": 88,
+      "toi": 80
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=The+Batman",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=The%20Batman+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 12,
+    "title": "RRR",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=RRR",
+    "votes": 200000,
+    "weeksSinceRelease": 140,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/f_vbAtFSEc0",
+    "year": "2022",
+    "runtime": "3h 7m",
+    "director": "S.S. Rajamouli",
+    "plot": "A fictitious story about two legendary revolutionaries and their journey away from home before they started fighting for their country in the 1920s.",
+    "cast": [
+      "N.T. Rama Rao Jr.",
+      "Ram Charan",
+      "Alia Bhatt",
+      "Ajay Devgn"
+    ],
+    "genre": [
+      "Action",
+      "Drama",
+      "Musical"
+    ],
+    "platformScores": {
+      "imdb": 78,
+      "rt": 95,
+      "meta": 83,
+      "google": 94,
+      "toi": 90
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=RRR",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=RRR+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 13,
+    "title": "Spider-Man: Across the Spider-Verse",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Spider-Verse",
+    "votes": 450000,
+    "weeksSinceRelease": 72,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/shW9i6k8cB0",
+    "year": "2023",
+    "runtime": "2h 20m",
+    "director": "Joaquim Dos Santos",
+    "plot": "Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.",
+    "cast": [
+      "Shameik Moore",
+      "Hailee Steinfeld",
+      "Oscar Isaac",
+      "Brian Tyree Henry"
+    ],
+    "genre": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "platformScores": {
+      "imdb": 86,
+      "rt": 95,
+      "meta": 86,
+      "google": 96,
+      "toi": 90
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Spider-Verse",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Spider-Man%3A%20Across%20the%20Spider-Verse+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 14,
+    "title": "Leo",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Leo",
+    "votes": 150000,
+    "weeksSinceRelease": 58,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/Po3jStA673E",
+    "year": "2023",
+    "runtime": "2h 44m",
+    "director": "Lokesh Kanagaraj",
+    "plot": "A mild-mannered cafe owner in Kashmir becomes a local hero, but drawing attention to himself brings old enemies out of the woodwork, questioning his true identity.",
+    "cast": [
+      "Vijay",
+      "Sanjay Dutt",
+      "Trisha Krishnan"
+    ],
+    "genre": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "platformScores": {
+      "imdb": 72,
+      "rt": 70,
+      "meta": null,
+      "google": 85,
+      "toi": 75
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Leo",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Leo+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 15,
+    "title": "Jawan",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Jawan",
+    "votes": 180000,
+    "weeksSinceRelease": 62,
+    "streamingPlatform": "Netflix",
+    "trailerUrl": "https://www.youtube.com/embed/MWOtxzB4XyY",
+    "year": "2023",
+    "runtime": "2h 49m",
+    "director": "Atlee",
+    "plot": "A high-octane action thriller which outlines the emotional journey of a man who is set to rectify the wrongs in the society.",
+    "cast": [
+      "Shah Rukh Khan",
+      "Nayanthara",
+      "Vijay Sethupathi",
+      "Deepika Padukone"
+    ],
+    "genre": [
+      "Action",
+      "Thriller"
+    ],
+    "platformScores": {
+      "imdb": 69,
+      "rt": 87,
+      "meta": null,
+      "google": 88,
+      "toi": 80
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Jawan",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Jawan+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 16,
+    "title": "Interstellar",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Interstellar",
+    "votes": 2100000,
+    "weeksSinceRelease": 520,
+    "streamingPlatform": "Prime Video",
+    "trailerUrl": "https://www.youtube.com/embed/zSWdZVtXT7E",
+    "year": "2014",
+    "runtime": "2h 49m",
+    "director": "Christopher Nolan",
+    "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival on a dying Earth.",
+    "cast": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain",
+      "Michael Caine"
+    ],
+    "genre": [
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "platformScores": {
+      "imdb": 87,
+      "rt": 73,
+      "meta": 74,
+      "google": 96,
+      "toi": 90
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Interstellar",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Interstellar+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 17,
+    "title": "The Dark Knight",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=The+Dark+Knight",
+    "votes": 2800000,
+    "weeksSinceRelease": 850,
+    "streamingPlatform": "Max",
+    "trailerUrl": "https://www.youtube.com/embed/EXeTwQWrcwY",
+    "year": "2008",
+    "runtime": "2h 32m",
+    "director": "Christopher Nolan",
+    "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine"
+    ],
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "platformScores": {
+      "imdb": 90,
+      "rt": 94,
+      "meta": 84,
+      "google": 97,
+      "toi": 95
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=The+Dark+Knight",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=The%20Dark%20Knight+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 18,
+    "title": "Avatar: The Way of Water",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Avatar+2",
+    "votes": 500000,
+    "weeksSinceRelease": 105,
+    "streamingPlatform": "Disney+",
+    "trailerUrl": "https://www.youtube.com/embed/d9MyW72ELq0",
+    "year": "2022",
+    "runtime": "3h 12m",
+    "director": "James Cameron",
+    "plot": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+    "cast": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "platformScores": {
+      "imdb": 76,
+      "rt": 76,
+      "meta": 67,
+      "google": 85,
+      "toi": 80
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Avatar+2",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Avatar%3A%20The%20Way%20of%20Water+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 19,
+    "title": "Everything Everywhere All at Once",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Everything+Everywhere",
+    "votes": 550000,
+    "weeksSinceRelease": 145,
+    "streamingPlatform": "Prime Video",
+    "trailerUrl": "https://www.youtube.com/embed/wxN1T1uxQ2g",
+    "year": "2022",
+    "runtime": "2h 19m",
+    "director": "Daniel Kwan, Daniel Scheinert",
+    "plot": "A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.",
+    "cast": [
+      "Michelle Yeoh",
+      "Ke Huy Quan",
+      "Jamie Lee Curtis",
+      "Stephanie Hsu"
+    ],
+    "genre": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "platformScores": {
+      "imdb": 78,
+      "rt": 94,
+      "meta": 81,
+      "google": 85,
+      "toi": 85
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Everything+Everywhere",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Everything%20Everywhere%20All%20at%20Once+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  },
+  {
+    "id": 20,
+    "title": "Parasite",
+    "poster": "https://placehold.co/400x600/1e293b/ffffff?text=Parasite",
+    "votes": 950000,
+    "weeksSinceRelease": 280,
+    "streamingPlatform": "Max",
+    "trailerUrl": "https://www.youtube.com/embed/isOGD_CGQZI",
+    "year": "2019",
+    "runtime": "2h 12m",
+    "director": "Bong Joon Ho",
+    "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "cast": [
+      "Song Kang-ho",
+      "Sun-kyun Lee",
+      "Cho Yeo-jeong",
+      "Choi Woo-shik"
+    ],
+    "genre": [
+      "Drama",
+      "Thriller",
+      "Comedy"
+    ],
+    "platformScores": {
+      "imdb": 85,
+      "rt": 99,
+      "meta": 96,
+      "google": 94,
+      "toi": 95
+    },
+    "posterUrl": "https://placehold.co/400x600/1e293b/ffffff?text=Parasite",
+    "backdropUrl": "https://placehold.co/1920x1080/111827/ffffff?text=Parasite+Backdrop",
+    "watchLink": "https://www.netflix.com"
+  }
+]
