@@ -40,34 +40,9 @@ export async function GET(
         let isChainValid = true;
         let brokenEntryId = null;
 
-        for (let i = 0; i < ledgerEntries.length; i++) {
-            const entry = ledgerEntries[i];
-
-            const expectedHash = ProvenanceEngine.generateBlock(
-                entry.Product_ID,
-                entry.Event_Type,
-                {}, // Default empty metadata as per schema
-                entry.Previous_Hash
-            );
-
-            if (entry.Hash !== expectedHash) {
-                isChainValid = false;
-                brokenEntryId = entry.ID;
-                break;
-            }
-
-            if (i > 0) {
-                const previousEntry = ledgerEntries[i - 1];
-                if (entry.Previous_Hash !== previousEntry.Hash) {
-                    isChainValid = false;
-                    brokenEntryId = entry.ID;
-                    break;
-                }
-            } else {
-                // First entry's Previous_Hash could be validated if we have a standard genesis hash
-                // e.g., 'genesis'
-            }
-        }
+        const validationResult = ProvenanceEngine.verifyChain(ledgerEntries, productRecord);
+        isChainValid = validationResult.isAuthentic;
+        brokenEntryId = validationResult.brokenEntryId;
 
         if (isChainValid) {
             return NextResponse.json({

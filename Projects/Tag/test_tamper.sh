@@ -6,7 +6,7 @@ echo ""
 
 # Wait for server to be ready
 echo "1. Waiting for local server to be responsive..."
-while ! curl -s http://localhost:3000 > /dev/null; do
+while ! curl -s http://localhost:3001 > /dev/null; do
   sleep 1
 done
 
@@ -14,7 +14,7 @@ done
 SERIAL="TEST-$(date +%s)"
 
 echo -e "\n2. Registering a new Product (Genesis Block)..."
-REGISTER_RES=$(curl -s -X POST http://localhost:3000/api/tag/register \
+REGISTER_RES=$(curl -s -X POST http://localhost:3001/api/tag/register \
   -H "Content-Type: application/json" \
   -d "{\"name\": \"Diamond Ring\", \"serialNumber\": \"$SERIAL\", \"manufacturer\": \"Tiffany\"}")
 
@@ -30,9 +30,9 @@ if [ -z "$PRODUCT_ID" ]; then
 fi
 
 echo -e "\n\n3. Adding lifecycle entry: 'Quality Inspection Passed'"
-UPDATE_RES=$(curl -s -X POST http://localhost:3000/api/tag/update \
+UPDATE_RES=$(curl -s -X POST http://localhost:3001/api/tag/update \
   -H "Content-Type: application/json" \
-  -d "{\"productId\": \"$PRODUCT_ID\", \"eventType\": \"Quality Inspection Passed\", \"verifiedBy\": \"Inspector_01\"}")
+  -d "{\"productId\": \"$PRODUCT_ID\", \"eventType\": \"Quality Inspection Passed\", \"verifiedBy\": \"Inspector_01\", \"metadata\": \"Location: NYC Facility, Batch: A41\"}")
 echo "Response:"
 echo "$UPDATE_RES"
 
@@ -40,7 +40,7 @@ echo "$UPDATE_RES"
 UPDATE_ENTRY_ID=$(echo "$UPDATE_RES" | grep -o '"ID":"[^"]*' | head -n 1 | cut -d'"' -f4)
 
 echo -e "\n\n4. Verifying Pristine Ledger..."
-VERIFY_RES_1=$(curl -s -X POST http://localhost:3000/api/tag/verify \
+VERIFY_RES_1=$(curl -s -X POST http://localhost:3001/api/tag/verify \
   -H "Content-Type: application/json" \
   -d "{\"productId\": \"$PRODUCT_ID\"}")
 echo "Response:"
@@ -55,13 +55,13 @@ else
 fi
 
 echo -e "\n\n5. TAMPERING WITH DATABASE DIRECTLY..."
-echo "Simulating a bad actor changing 'Quality Inspection Passed' to 'FAKE FLAWLESS STATUS' directly in SQLite."
+echo "Simulating a bad actor changing the Inspector's name ('Inspector_01' to 'HACKER_99') directly in the LedgerEntry table."
 # Use sqlite3 to manually update the record without recalculating the hash
-sqlite3 prisma/dev.db "UPDATE LedgerEntry SET Event_Type = 'FAKE FLAWLESS STATUS' WHERE ID = '$UPDATE_ENTRY_ID';"
+sqlite3 prisma/dev.db "UPDATE LedgerEntry SET Verified_By = 'HACKER_99' WHERE ID = '$UPDATE_ENTRY_ID';"
 echo "=> Database tampered."
 
 echo -e "\n\n6. Verifying Tampered Ledger..."
-VERIFY_RES_2=$(curl -s -X POST http://localhost:3000/api/tag/verify \
+VERIFY_RES_2=$(curl -s -X POST http://localhost:3001/api/tag/verify \
   -H "Content-Type: application/json" \
   -d "{\"productId\": \"$PRODUCT_ID\"}")
 echo "Response:"

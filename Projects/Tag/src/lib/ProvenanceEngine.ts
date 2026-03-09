@@ -20,14 +20,20 @@ export class ProvenanceEngine {
   static generateBlock(
     productId: string,
     status: string,
-    metadata: Record<string, any> = {},
-    previousHash: string
+    metadata: string | null = null,
+    previousHash: string,
+    timestamp: Date | string,
+    nonce: string,
+    verifiedBy: string
   ): string {
     const payload = JSON.stringify({
       productId,
       status,
       metadata,
       previousHash,
+      timestamp: typeof timestamp === 'string' ? timestamp : timestamp.toISOString(),
+      nonce,
+      verifiedBy,
     });
 
     return CryptoJS.SHA256(payload).toString(CryptoJS.enc.Hex);
@@ -40,19 +46,34 @@ export class ProvenanceEngine {
    * @param entries Array of sequential ledger entries for a product
    * @returns Object containing isAuthentic boolean and the optional broken entry ID
    */
-  static verifyChain(entries: any[]): { isAuthentic: boolean; brokenEntryId: string | null } {
+  static verifyChain(entries: any[], product?: any): { isAuthentic: boolean; brokenEntryId: string | null } {
     if (!entries || entries.length === 0) {
       return { isAuthentic: true, brokenEntryId: null };
     }
 
     for (let i = 0; i < entries.length; i++) {
       const entry = entries[i];
+      let metadataToHash = entry.Metadata;
+
+      // Ensure that if it's the Genesis block, the current Off-Chain Product Metadata
+      // matches what was appended to the Genesis entry's metadata string during registration.
+      // If the database Product table was tampered with, this validation fails instantly.
+      if (entry.Event_Type === 'Genesis' && product?.Metadata) {
+        const expectedMetadataStr = `Manufacturer: ${product.Manufacturer}`;
+        const expectedCombined = `${expectedMetadataStr} | ProductMeta: ${product.Metadata}`;
+        if (entry.Metadata !== expectedCombined) {
+          return { isAuthentic: false, brokenEntryId: entry.ID };
+        }
+      }
 
       const expectedHash = this.generateBlock(
         entry.Product_ID,
         entry.Event_Type,
-        {}, // We aren't storing dynamic metadata in SQLite yet, but extendable
-        entry.Previous_Hash
+        metadataToHash,
+        entry.Previous_Hash,
+        entry.Timestamp,
+        entry.Nonce,
+        entry.Verified_By
       );
 
       if (entry.Hash !== expectedHash) {

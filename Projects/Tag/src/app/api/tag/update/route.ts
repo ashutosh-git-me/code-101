@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { ProvenanceEngine } from '@/lib/ProvenanceEngine';
+import crypto from 'crypto';
 
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { productId, eventType, verifiedBy } = body;
+        const { productId, eventType, verifiedBy, metadata } = body;
 
         if (!productId || !eventType || !verifiedBy) {
             return NextResponse.json(
@@ -37,18 +38,28 @@ export async function POST(request: NextRequest) {
 
             // 3. Calculate new hash
             const previousHash = latestEntry.Hash;
+            const timestamp = new Date();
+            const nonce = crypto.randomBytes(16).toString('hex');
+            const metadataOpt = metadata || null;
+
             const hash = ProvenanceEngine.generateBlock(
                 productId,
                 eventType,
-                {},
-                previousHash
+                metadataOpt,
+                previousHash,
+                timestamp,
+                nonce,
+                verifiedBy
             );
 
             // 4. Create new ledger entry
             const ledgerEntry = await tx.ledgerEntry.create({
                 data: {
                     Product_ID: productId,
+                    Timestamp: timestamp,
                     Event_Type: eventType,
+                    Metadata: metadataOpt,
+                    Nonce: nonce,
                     Hash: hash,
                     Previous_Hash: previousHash,
                     Verified_By: verifiedBy,

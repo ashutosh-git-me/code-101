@@ -11,10 +11,11 @@ datasource db {
 }
 
 model Product {
-  ID            String        @id @default(uuid())
+  ID            String        @id
   Name          String
   Serial_Number String        @unique
   Manufacturer  String
+  Metadata      String?
   LedgerEntries LedgerEntry[]
 }
 
@@ -24,6 +25,8 @@ model LedgerEntry {
   Product       Product  @relation(fields: [Product_ID], references: [ID])
   Timestamp     DateTime @default(now())
   Event_Type    String
+  Metadata      String?
+  Nonce         String
   Hash          String
   Previous_Hash String
   Verified_By   String

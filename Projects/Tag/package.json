@@ -6,14 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "audit-tag": "tsx audit.ts"
   },
   "dependencies": {
-    "@prisma/client": "^7.4.2",
+    "@prisma/client": "^6.19.2",
     "crypto-js": "^4.2.0",
     "lucide-react": "^0.577.0",
+    "nanoid": "^5.1.6",
     "next": "15.5.12",
-    "prisma": "^7.4.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
@@ -26,7 +27,12 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.12",
+    "prisma": "^6.19.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed-tag.ts"
   }
 }
