@@ -4,7 +4,9 @@
 ![LeetCode Stats](https://leetcard.jacoblin.cool/4ehjxPI7Hw?theme=dark&font=Karma)
 
 ## 🚀 Projects
-- Google Antigravity Clone
+- MovieMeter : AI Movie Scores and Reviews Aggregator
+- AVA : AI MaaS & Navigation App
+- TAG : Blockchain ID & Sequence Tracker
 
 ## 📚 Learning
 - DSA
