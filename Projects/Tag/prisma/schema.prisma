@@ -1,33 +1,60 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-generator client {
-  provider = "prisma-client-js"
-}
-
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Brand {
+  id         String    @id @default(nanoid())
+  name       String
+  industry   String
+  trustScore Float     @default(0.0)
+  products   Product[]
+}
+
 model Product {
-  ID            String        @id
-  Name          String
-  Serial_Number String        @unique
-  Manufacturer  String
-  Metadata      String?
-  LedgerEntries LedgerEntry[]
+  id           String        @id // NanoID
+  batchId      String?
+  brandId      String
+  name         String
+  category     String
+  currentOwner String
+  status       String        @default("ACTIVE")
+  brand        Brand         @relation(fields: [brandId], references: [id])
+  ledger       LedgerEntry[]
+  components   Component[]
+  reviews      Review[]
 }
 
 model LedgerEntry {
-  ID            String   @id @default(uuid())
-  Product_ID    String
-  Product       Product  @relation(fields: [Product_ID], references: [ID])
-  Timestamp     DateTime @default(now())
-  Event_Type    String
-  Metadata      String?
-  Nonce         String
-  Hash          String
-  Previous_Hash String
-  Verified_By   String
+  id         String   @id @default(cuid())
+  productId  String
+  eventType  String   // MANUFACTURE, TRANSFER, ACCIDENT, etc.
+  price      Float?
+  ownerId    String?
+  metadata   String   // JSON String
+  timestamp  DateTime @default(now())
+  hash       String
+  prevHash   String
+  product    Product  @relation(fields: [productId], references: [id])
+}
+
+model Component {
+  id              String  @id @default(nanoid())
+  parentProductId String
+  name            String
+  origin          String
+  product         Product @relation(fields: [parentProductId], references: [id])
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  productId  String
+  userId     String
+  rating     Int
+  isVerified Boolean  @default(false)
+  product    Product  @relation(fields: [productId], references: [id])
 }

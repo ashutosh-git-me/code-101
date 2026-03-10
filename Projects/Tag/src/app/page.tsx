@@ -1,103 +1,58 @@
-import Image from "next/image";
+"use client";
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ShieldCheck, Search, PackageSearch } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const WebScanner = dynamic(() => import('@/components/Scanner'), { ssr: false });
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-slate-900 text-white font-sans selection:bg-blue-500/30">
+      <div className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center justify-center text-center">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+        >
+          <ShieldCheck className="w-24 h-24 text-blue-500 mb-8 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+        </motion.div>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 pb-2">
+          TAG Trust Engine
+        </h1>
+
+        <p className="text-xl md:text-2xl text-slate-400 max-w-2xl mb-12 font-medium leading-relaxed">
+          Cryptographic Provenance & Product Authentication.<br />
+          <span className="text-slate-300">Zero-trust architecture for the modern supply chain.</span>
+        </p>
+
+        <div className="w-full max-w-3xl mb-16 relative z-10">
+          <WebScanner />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl relative z-0">
+
+          <Link href="/search" className="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-blue-500 transition-all p-8 rounded-3xl flex flex-col items-center text-center shadow-lg hover:shadow-blue-500/20">
+            <div className="bg-blue-500/10 p-4 rounded-2xl mb-6 group-hover:scale-110 transition-transform">
+              <Search className="w-10 h-10 text-blue-400" />
+            </div>
+            <h2 className="text-2xl font-bold mb-3 text-slate-100">Global Scanner Interface</h2>
+            <p className="text-slate-400 font-medium leading-relaxed">Search the transparent ledger by NanoID, Batch ID, or Product Name to verify authenticity instantly.</p>
+          </Link>
+
+          <div className="group bg-slate-800 border border-slate-700 p-8 rounded-3xl flex flex-col items-center text-center opacity-70 cursor-not-allowed">
+            <div className="bg-purple-500/10 p-4 rounded-2xl mb-6">
+              <PackageSearch className="w-10 h-10 text-purple-400" />
+            </div>
+            <h2 className="text-2xl font-bold mb-3 text-slate-100">Brand Analytics</h2>
+            <p className="text-slate-400 font-medium leading-relaxed">Enterprise dashboard for tracking twin groups and executing global inventory recalls.</p>
+            <p className="text-xs text-purple-400 font-bold mt-4 uppercase tracking-widest">Requires Brand Auth URL</p>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }
