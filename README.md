@@ -1,8 +1,7 @@
 # Code-101 Journey
 
 ## 📊 LeetCode Stats
-
-![LeetCode Stats](https://leetcode-stats.vercel.app/api?username=4ehjxPI7Hw&theme=dark)
+![LeetCode Stats](https://leetcard.jacoblin.cool/4ehjxPI7Hw?theme=dark&font=Karma)
 
 ## 🚀 Projects
 - Google Antigravity Clone
