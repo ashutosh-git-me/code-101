@@ -15,7 +15,7 @@ int main()
         if(n%i==0){
             cout<<n<<" is not prime"<<endl;
         }
-        i+=1
+        i+=1; 
     }
     
     return 0;

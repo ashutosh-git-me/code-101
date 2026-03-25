@@ -81,9 +81,6 @@ int main()
     */
 
     auto it = partition(arr.begin(), arr.end(), checkEven);
-    for(int it: arr){
-        cout<<it<<" ";
-    }cout<<endl;
     
     for(int a: arr){
         cout<<a<<" ";
