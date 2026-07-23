@@ -2,7 +2,7 @@
 import { useState, useCallback, useMemo } from 'react';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyAJVRDLDOVjtsmjFHS-cHU8bDy-gPZ6aMM';
+const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
 
 const mapStyles = [
   { "elementType": "geometry", "stylers": [{ "color": "#212121" }] },
