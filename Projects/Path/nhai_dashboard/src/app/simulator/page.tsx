@@ -67,7 +67,7 @@ export default function SimulatorPage() {
     try {
       const res = await fetch('/api/telemetry', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-edge-token': 'nhai-edge-secret-2026' },
+        headers: { 'Content-Type': 'application/json', 'x-edge-token': process.env.NEXT_PUBLIC_EDGE_TOKEN || '' },
         body: JSON.stringify(payload),
       });
 
@@ -105,7 +105,7 @@ export default function SimulatorPage() {
     try {
       const res = await fetch('/api/telemetry', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-edge-token': 'nhai-edge-secret-2026' },
+        headers: { 'Content-Type': 'application/json', 'x-edge-token': process.env.NEXT_PUBLIC_EDGE_TOKEN || '' },
         body: JSON.stringify(payload),
       });
 
@@ -127,7 +127,7 @@ export default function SimulatorPage() {
     try {
       const res = await fetch('/api/telemetry', {
         method: 'DELETE',
-        headers: { 'x-edge-token': 'nhai-edge-secret-2026' },
+        headers: { 'x-edge-token': process.env.NEXT_PUBLIC_EDGE_TOKEN || '' },
       });
       if (res.ok) {
         addLog('INFO', 'DELETE 200: All telemetry wiped from Command Center.');

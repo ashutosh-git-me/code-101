@@ -59,7 +59,7 @@ export default function LoginPage() {
           </div>
           <div className="flex items-center gap-3 bg-black/40 rounded-lg px-4 py-2.5 border border-purple-500/20">
             <span className="text-[10px] text-slate-500 uppercase tracking-wider shrink-0">Password:</span>
-            <code className="text-purple-300 font-mono text-sm font-bold tracking-wide select-all">nhai-admin</code>
+            <code className="text-purple-300 font-mono text-sm font-bold tracking-wide select-all">{process.env.NEXT_PUBLIC_DEMO_PASSWORD || 'nhai-admin'}</code>
           </div>
         </div>
 
