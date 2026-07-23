@@ -1,0 +1,76 @@
+[
+  {
+    "event_id": "EV-001",
+    "timestamp": "2026-04-12T10:00:00Z",
+    "location": {
+      "lat": 28.7,
+      "lng": 77.2,
+      "speed_kmh": 60
+    },
+    "asset": {
+      "type": "toll_plaza",
+      "reflectivity_mcd": 200,
+      "baseline_mcd": 150
+    },
+    "environment": {
+      "weather": "clear",
+      "ambient_light": "daylight"
+    },
+    "action_flag": "HEALTHY"
+  },
+  {
+    "event_id": "EV-002",
+    "timestamp": "2026-04-12T10:05:00Z",
+    "location": {
+      "lat": 22.5,
+      "lng": 88.3,
+      "speed_kmh": 45
+    },
+    "asset": {
+      "type": "lane_marking",
+      "reflectivity_mcd": 80,
+      "baseline_mcd": 120
+    },
+    "environment": {
+      "weather": "fog",
+      "ambient_light": "dusk"
+    },
+    "action_flag": "MAINTENANCE_REQUIRED"
+  },
+  {
+    "event_id": "EV-003",
+    "timestamp": "2026-04-12T10:10:00Z",
+    "location": {
+      "lat": 12.9,
+      "lng": 77.5,
+      "speed_kmh": 80
+    },
+    "asset": {
+      "type": "sign_board",
+      "reflectivity_mcd": 40,
+      "baseline_mcd": 250
+    },
+    "environment": {
+      "weather": "rain",
+      "ambient_light": "night"
+    },
+    "action_flag": "MAINTENANCE_REQUIRED"
+  },
+  {
+    "event_id": "live_edge_9921",
+    "timestamp": "2026-04-13T14:00:00Z",
+    "location": {
+      "lat": 23.2599,
+      "lng": 77.4126,
+      "road_type": "NH", // NH, SH, or PMGSY
+      "highway": "NH-46",
+      "speed_kmh": 65
+    },
+    "incident": {
+      "category": "INFRA_DAMAGE", // e.g., INFRA_DAMAGE, DYNAMIC_EVENT, ASSET_DEGRADATION
+      "type": "pothole",
+      "severity": "CRITICAL", // LOW, MODERATE, CRITICAL
+      "extent": "Depth: 15cm, Dia: 45cm" // Human-readable measurement
+    }
+  }
+]
