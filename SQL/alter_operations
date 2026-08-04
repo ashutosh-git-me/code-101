@@ -1,0 +1,23 @@
+create table students(
+stud_id serial primary key,
+name varchar(100),
+age bigint
+);
+
+insert into students(name,age)
+values('Ashu',23),
+('ABD',45);
+
+ALTER TABLE students
+ADD COLUMN email varchar(100) DEFAULT 'NA';
+
+SELECT * FROM students;
+
+ALTER TABLE students
+RENAME COLUMN name to full_name;
+
+ALTER TABLE students
+ALTER COLUMN age TYPE SMALLINT;
+
+ALTER TABLE students
+ADD CONSTRAINT age_check CHECK (age >= 0);

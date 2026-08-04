@@ -1,0 +1,13 @@
+create table random(
+ID serial Primary key,
+name varchar(100) not null,
+email text unique not null,
+created_at date default now(),
+age int check (age >= 18)
+);
+
+insert into random (name,email,age)
+values ('Ashu','ashu@gmai.com',23),
+('Ab','abd17@gmail.com',34);
+
+select * from random;
